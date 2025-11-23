@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
-import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function ProductCard({ product }: { product: Product }) {
@@ -15,7 +14,7 @@ export function ProductCard({ product }: { product: Product }) {
     <Card className="group flex flex-col overflow-hidden bg-card rounded-xl border-border/80 shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1.5">
       {image && (
         <div className="relative aspect-[16/9] w-full overflow-hidden">
-          <Image 
+          <img 
             src={image.imageUrl} 
             alt={product.name} 
             width={600}
