@@ -1,20 +1,9 @@
-import type { LucideIcon, LucideProps } from "lucide-react";
-import { BookOpen, NotebookText, FileText, CalendarDays } from "lucide-react";
-import React from "react";
-
-export const iconMap: { [key: string]: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>> } = {
-  BookOpen,
-  NotebookText,
-  FileText,
-  CalendarDays,
-};
-
 export type Product = {
   name: string;
   description: string;
   price: string;
   link: string;
-  icon: keyof typeof iconMap;
+  icon: string;
 };
 
 export const products: Product[] = [
