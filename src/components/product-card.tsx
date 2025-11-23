@@ -18,7 +18,8 @@ export function ProductCard({ product }: { product: Product }) {
           <Image 
             src={image.imageUrl} 
             alt={product.name} 
-            fill 
+            width={600}
+            height={338}
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             data-ai-hint={image.imageHint}
           />
