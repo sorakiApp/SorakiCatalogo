@@ -1,31 +1,46 @@
 "use client";
 
 import type { Product } from '@/lib/products';
-import { iconMap } from '@/lib/icon-map';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Heart, Sparkle } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function ProductCard({ product }: { product: Product }) {
-  const Icon = iconMap[product.icon];
+  const image = PlaceHolderImages.find(img => img.id === product.image);
 
   return (
-    <Card className="group flex flex-col overflow-hidden bg-card rounded-xl border-border/80 shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
-      <CardHeader>
-        <div className="flex items-center gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/50 text-accent-foreground">
-            {Icon && <Icon className="h-6 w-6" />}
-          </div>
-          <CardTitle className="font-headline text-lg font-bold">{product.name}</CardTitle>
+    <Card className="group flex flex-col overflow-hidden bg-card rounded-xl border-border/80 shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1.5">
+      {image && (
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image 
+            src={image.imageUrl} 
+            alt={product.name} 
+            fill 
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            data-ai-hint={image.imageHint}
+          />
         </div>
+      )}
+      <CardHeader className="p-6">
+        <CardTitle className="font-headline text-xl font-bold">{product.name}</CardTitle>
+        <CardDescription className="pt-2">{product.description}</CardDescription>
       </CardHeader>
-      <CardContent className="flex-grow">
-        <CardDescription>{product.description}</CardDescription>
+      <CardContent className="flex-grow p-6 pt-0">
+        <div className="flex items-center justify-between">
+          <p className="font-headline text-3xl font-bold text-primary">{product.price}</p>
+          {product.guarantee && (
+            <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+              <ShieldCheck className="h-4 w-4 text-green-500" />
+              <span>{product.guarantee}</span>
+            </div>
+          )}
+        </div>
       </CardContent>
-      <CardFooter className="flex flex-col items-start gap-4 p-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="font-headline text-xl font-bold">{product.price}</p>
-        <Button asChild className="w-full shadow-sm hover:shadow-md sm:w-auto">
+      <CardFooter className="p-6 pt-0">
+        <Button asChild className="w-full text-lg py-6 shadow-sm hover:shadow-md">
           <Link href={product.link}>
             Acessar produto <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>

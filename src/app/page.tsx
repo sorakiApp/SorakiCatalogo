@@ -1,9 +1,10 @@
 import { products } from '@/lib/products';
 import { ProductCard } from '@/components/product-card';
 import { SorakiMascot } from '@/components/soraki-mascot';
-import { Sparkles } from 'lucide-react';
 
 export default function Home() {
+  const mainProduct = products[0];
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="container mx-auto flex flex-col items-center justify-center space-y-2 py-16 text-center md:py-24">
@@ -13,16 +14,12 @@ export default function Home() {
           </h1>
         </div>
         <p className="max-w-xl text-lg text-muted-foreground">
-          Escolha o que combina com sua jornada de estudos hoje.
+          O guia oficial do universo Soraki para estudar com leveza, clareza e constância.
         </p>
       </header>
-      <main className="flex-1">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {products.map((product, index) => (
-              <ProductCard key={index} product={product} />
-            ))}
-          </div>
+      <main className="flex flex-1 items-start justify-center">
+        <div className="container mx-auto max-w-sm px-4">
+          <ProductCard product={mainProduct} />
         </div>
       </main>
       <footer className="container mx-auto flex flex-col items-center justify-center gap-4 py-12 text-center">
