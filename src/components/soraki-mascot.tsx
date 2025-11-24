@@ -1,8 +1,9 @@
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export function SorakiMascot({ className, ...props }: { className?: string }) {
   return (
-    <img
+    <Image
       src="/soraki.png"
       alt="Soraki Mascot"
       width={40}
