@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
+import SorakiMethodCover from './metodo-soraki.png';
 
 export function ProductCard({ product }: { product: Product }) {
 
@@ -14,7 +15,7 @@ export function ProductCard({ product }: { product: Product }) {
       {product.image === 'sorakiMethodCover' && (
         <div className="relative aspect-[16/9] w-full overflow-hidden">
           <Image 
-            src="/metodo-soraki.png"
+            src={SorakiMethodCover}
             alt={product.name}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
