@@ -14,7 +14,7 @@ export function ProductCard({ product }: { product: Product }) {
       {product.image === 'sorakiMethodCover' && (
         <div className="relative aspect-[16/9] w-full overflow-hidden">
           <Image 
-            src="/metodo-soraki.png"
+            src="/Método soraki.png"
             alt={product.name}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"

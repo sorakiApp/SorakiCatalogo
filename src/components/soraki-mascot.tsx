@@ -6,8 +6,8 @@ export function SorakiMascot({ className, ...props }: { className?: string }) {
     <Image
       src="/soraki.png"
       alt="Soraki Mascot"
-      width={40}
-      height={40}
+      width={80}
+      height={80}
       className={cn('text-foreground/80', className)}
       {...props}
     />
