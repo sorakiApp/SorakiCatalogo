@@ -3,8 +3,6 @@ import { ProductCard } from '@/components/product-card';
 import { SorakiMascot } from '@/components/soraki-mascot';
 
 export default function Home() {
-  const mainProduct = products[0];
-
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="container mx-auto flex flex-col items-center justify-center space-y-2 py-16 text-center md:py-24">
@@ -17,9 +15,11 @@ export default function Home() {
           O guia oficial do universo Soraki para estudar com leveza, clareza e constância.
         </p>
       </header>
-      <main className="flex flex-1 items-start justify-center">
-        <div className="container mx-auto max-w-sm px-4">
-          <ProductCard product={mainProduct} />
+      <main className="flex-1">
+        <div className="container mx-auto grid max-w-4xl grid-cols-1 gap-8 px-4 md:grid-cols-2">
+          {products.map((product) => (
+            <ProductCard key={product.name} product={product} />
+          ))}
         </div>
       </main>
       <footer className="container mx-auto flex flex-col items-center justify-center gap-4 py-12 text-center">
