@@ -21,7 +21,7 @@ export const products: Product[] = [
   {
     name: "Planner Soraki – 30 Dias de Constância (PDF)",
     description: "Planner imprimível inspirado no minimalismo japonês.\n30 dias de constância com páginas diárias, semanais e frases leves da Soraki.",
-    price: "R$ 14,90",
+    price: "R$ 19,90",
     link: "https://pay.cakto.com.br/vom58ac_667576",
     icon: "FileText",
     guarantee: "7 dias de garantia",
