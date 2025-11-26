@@ -1,0 +1,17 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "sorakiMethodCover",
+      "description": "Método Soraki de Estudo Leve",
+      "imageUrl": "/1.png",
+      "imageHint": "Método Soraki de Estudo Leve"
+    },
+    {
+      "id": "sorakiPlanner",
+      "description": "Planner Soraki – 30 Dias de Constância (PDF)",
+      "imageUrl": "/2.png",
+      "imageHint": "Planner Soraki – 30 Dias de Constância (PDF)"
+    }
+  ]
+}
