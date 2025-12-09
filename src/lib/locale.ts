@@ -38,8 +38,8 @@ export const locale = {
         name: "Soraki Light Study Method",
         description:
           "The official guide to the Soraki universe for studying with lightness, clarity and consistency.",
-        price: "$14.90",
-        link: "https://pay.cakto.com.br/bryus4d_657937",
+        price: "$5.99",
+        link: "https://pay.kiwify.com/5rAAAft",
         icon: "BookMarked",
         guarantee: "7-day money-back guarantee",
         image: "sorakiMethodCover",
@@ -48,8 +48,8 @@ export const locale = {
         name: "Soraki Planner – 30 Days of Consistency (PDF)",
         description:
           "Printable planner inspired by Japanese minimalism.\n30 days of consistency with daily, weekly and light Soraki phrases.",
-        price: "$19.90",
-        link: "https://pay.cakto.com.br/vom58ac_667576",
+        price: "$10.99",
+        link: "https://pay.kiwify.com/M6u30mV",
         icon: "FileText",
         guarantee: "7-day money-back guarantee",
         image: "sorakiPlanner",

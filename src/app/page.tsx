@@ -4,6 +4,8 @@ import { ProductCard } from '@/components/product-card';
 import { SorakiMascot } from '@/components/soraki-mascot';
 import { useState } from 'react';
 import { locale } from '@/lib/locale';
+import { Button } from '@/components/ui/button';
+import { Languages } from 'lucide-react';
 
 export default function Home() {
   const [lang, setLang] = useState<"pt" | "en">('pt');
@@ -19,7 +21,10 @@ export default function Home() {
           <h1 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
             {locale[lang].title}
           </h1>
-          <button onClick={toggleLang} className="text-sm font-medium text-muted-foreground hover:text-foreground">({lang === 'pt' ? 'EN' : 'PT'})</button>
+          <Button variant="outline" size="icon" onClick={toggleLang}>
+            <Languages className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+            <span className="sr-only">Toggle language</span>
+          </Button>
         </div>
         <p className="max-w-xl text-lg text-muted-foreground">
           {locale[lang].description}
